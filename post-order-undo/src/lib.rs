@@ -1,4 +1,6 @@
-
+/*
+Given the sequence of keys visited by a postorder traversal of a binary search tree, reconstruct the tree.
+*/
 pub fn parse_post_order(elems: &Vec<i32>) -> Vec<Node> {
     let mut current = 0;
     let mut next = 1;

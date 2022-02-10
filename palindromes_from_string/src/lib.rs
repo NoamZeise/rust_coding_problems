@@ -1,3 +1,9 @@
+/* 
+
+Given a string, split it into as few strings as possible such that each string is a palindrome.
+
+*/
+
 
 fn palindrome(string: &str) -> bool {
     let mut start = 0;
