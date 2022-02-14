@@ -104,7 +104,7 @@ mod test {
         println!("");
         parse_post_order(&test_input2);
 
-        assert!(false);
+        assert!(false); //to see output with cargo test
     }
 
 

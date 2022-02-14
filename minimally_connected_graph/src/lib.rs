@@ -6,7 +6,7 @@ Given an undirected graph, check if the graph is minimally-connected.
 You can choose to represent the graph as either an adjacency matrix or adjacency list.
 */
 
-fn minimally_connected(matrix: &Vec<Vec<u32>>) -> bool {
+pub fn minimally_connected(matrix: &Vec<Vec<u32>>) -> bool {
     let mut connections = 0;
     for node in matrix {
         connections += node.len();
