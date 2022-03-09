@@ -5,7 +5,7 @@ pub fn parse_post_order(elems: &Vec<i32>) -> Vec<Node> {
     let mut current = 0;
     let mut next = 1;
     let mut nodes: Vec<Node> = vec![];
-    nodes.resize(elems.len() + 1, Node::new());
+    nodes.resize(elems.len(), Node::new());
 
     for (i, e) in Iterator::enumerate(elems.iter().rev()) {
         let new_value = Value::new(*e, next);
@@ -14,6 +14,7 @@ pub fn parse_post_order(elems: &Vec<i32>) -> Vec<Node> {
                 match &nodes[current].this {
                     None => {
                         nodes[current].this = Some(Value::new(*e, i));
+                        next -= 1;
                         break;
                     },
                     Some(n) => *n
